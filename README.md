@@ -47,12 +47,15 @@ Ans:	On the printed ticket the price changed to the given ticket price.
 ### Exercise 2.6
 * Write out what you think the outer wrappers of the `Student` and `LabClass` classes might look like – do not worry about the inner part.
 
-Ans:public class Student{      
+Ans:
+public class Student{      
 	//Inner Part
+
 }
 
 public class LabClass{
 	//Inner Part
+
 }
 
 ### Exercise 2.7
