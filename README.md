@@ -50,6 +50,7 @@ Ans:	On the printed ticket the price changed to the given ticket price.
 Ans:public class Student{      
 	//Inner Part
 }
+
 public class LabClass{
 	//Inner Part
 }
@@ -85,8 +86,11 @@ Ans: It is possible to leave out "public".
 	* Hint: There is only one constructor in the class.
 	
 Ans:	Fields: price,balance,total
+	
 	Constructor: public TicketMachine()
+	
 	Methods:getPrice(),getBalace(),insertMoney(),printTicket()
+	
 	Parameters:ticketCost,amount
 
 ### Exercise 2.10
