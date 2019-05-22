@@ -23,12 +23,13 @@
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine(int ticketCost)
+    public TicketMachine(int ticketPrice )
     {
-        price = ticketCost;
+        price = ticketPrice;
         balance = 0;
         total = 0;
     }
+    
 
     /**
      * Return the price of a ticket.
@@ -46,13 +47,20 @@
     {
         return balance;
     }
+   
 
     /**
      * Receive an amount of money in cents from a customer.
      */
     public void insertMoney(int amount)
     {
+        if(amount>0)
         balance = balance + amount;
+        else
+        System.out.println("Invalid amount");
+    }
+    public void showPrice(){
+     System.out.println("The price of a ticket is "+price+"cents.");
     }
 
     /**
@@ -61,7 +69,8 @@
      * reduce the balance to zero.
      */
     public void printTicket()
-    {
+    {   
+        if(balance>=price){
         // Simulate the printing of a ticket.
         System.out.println("##################");
         System.out.println("# The BlueJ Line");
@@ -69,10 +78,14 @@
         System.out.println("# " + price + " cents.");
         System.out.println("##################");
         System.out.println();
-
+        balance =balance-price;
+    }
+    else{
+     System.out.println("You still need to pay "+(price-balance));
+    }
         // Update the total collected with the balance.
-        total = total + balance;
+      
         // Clear the balance.
-        balance = 0;
+        
     }
 }
